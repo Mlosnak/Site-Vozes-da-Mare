@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# AuthServer
-Auth system made with C# and .Net
 =======
-# Vozes da Maré Web
+# Vozes da Maré Web App
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
