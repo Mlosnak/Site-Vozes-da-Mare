@@ -1,4 +1,3 @@
-=======
 # Vozes da Maré Web App
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
