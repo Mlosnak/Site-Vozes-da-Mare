@@ -1,0 +1,93 @@
+import heroBanner1 from "@/assets/hero-banner-1.jpg";
+import heroBanner2 from "@/assets/hero-banner-2.jpg";
+import heroBanner3 from "@/assets/hero-banner-3.jpg";
+
+export const mockArticles = [
+  {
+    id: "1",
+    title: "Análise Política: O Futuro da Democracia Brasileira",
+    excerpt: "Uma reflexão profunda sobre os rumos políticos do país e os desafios que enfrentamos para fortalecer nossas instituições democráticas.",
+    coverImage: heroBanner1,
+    author: "João Silva",
+    publishedAt: "2024-01-15T10:00:00Z",
+    categories: ["Política"],
+    slug: "analise-politica-futuro-democracia",
+  },
+  {
+    id: "2",
+    title: "Brasil no Cenário Internacional: Desafios e Oportunidades",
+    excerpt: "Como as relações internacionais impactam o desenvolvimento nacional e o que podemos esperar para os próximos anos.",
+    coverImage: heroBanner2,
+    author: "Maria Santos",
+    publishedAt: "2024-01-14T14:30:00Z",
+    categories: ["Questão Internacional"],
+    slug: "brasil-cenario-internacional",
+  },
+  {
+    id: "3",
+    title: "Economia e Desenvolvimento Social: Um Caminho Possível",
+    excerpt: "Os caminhos para um crescimento econômico sustentável e inclusivo que beneficie toda a população brasileira.",
+    coverImage: heroBanner3,
+    author: "Pedro Oliveira",
+    publishedAt: "2024-01-13T09:15:00Z",
+    categories: ["Economia"],
+    slug: "economia-desenvolvimento-social",
+  },
+  {
+    id: "4",
+    title: "A Questão Nacional e os Desafios do Federalismo",
+    excerpt: "Uma análise sobre como o pacto federativo brasileiro pode ser aprimorado para atender melhor as demandas regionais.",
+    coverImage: heroBanner1,
+    author: "Ana Costa",
+    publishedAt: "2024-01-12T16:45:00Z",
+    categories: ["Questão Nacional", "Política"],
+    slug: "questao-nacional-federalismo",
+  },
+  {
+    id: "5",
+    title: "Política Externa Brasileira no Século XXI",
+    excerpt: "Os novos rumos da diplomacia brasileira e seu papel no cenário geopolítico global.",
+    coverImage: heroBanner2,
+    author: "Carlos Mendes",
+    publishedAt: "2024-01-11T11:00:00Z",
+    categories: ["Questão Internacional", "Política"],
+    slug: "politica-externa-seculo-xxi",
+  },
+  {
+    id: "6",
+    title: "Reforma Tributária: Impactos na Economia",
+    excerpt: "Entenda como as mudanças no sistema tributário brasileiro afetarão empresas e cidadãos.",
+    coverImage: heroBanner3,
+    author: "Luciana Ferreira",
+    publishedAt: "2024-01-10T08:30:00Z",
+    categories: ["Economia", "Questão Nacional"],
+    slug: "reforma-tributaria-impactos",
+  },
+  {
+    id: "7",
+    title: "Eleições e Participação Popular",
+    excerpt: "A importância do voto consciente e da participação cidadã no processo democrático.",
+    coverImage: heroBanner1,
+    author: "Roberto Lima",
+    publishedAt: "2024-01-09T13:20:00Z",
+    categories: ["Política"],
+    slug: "eleicoes-participacao-popular",
+  },
+  {
+    id: "8",
+    title: "Acordos Comerciais e o Mercosul",
+    excerpt: "Os desafios e oportunidades dos acordos comerciais para o bloco sul-americano.",
+    coverImage: heroBanner2,
+    author: "Fernanda Rocha",
+    publishedAt: "2024-01-08T10:45:00Z",
+    categories: ["Questão Internacional", "Economia"],
+    slug: "acordos-comerciais-mercosul",
+  },
+];
+
+export const categories = [
+  { name: "Política", slug: "politica", accentColor: "primary" as const },
+  { name: "Questão Internacional", slug: "questao-internacional", accentColor: "tertiary" as const },
+  { name: "Questão Nacional", slug: "questao-nacional", accentColor: "secondary" as const },
+  { name: "Economia", slug: "economia", accentColor: "accent" as const },
+];

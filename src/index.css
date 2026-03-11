@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary-color: #e4142c;
+    --primary: 353 84% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 100% 30%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 50 100% 50%;
+    --accent-foreground: 220 15% 15%;
+
+    --tertiary: 214 100% 23%;
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 10% 60%;
+    --input: 220 10% 60%;
+    --ring: 353 84% 49%;
+
+    --radius: 0.5rem;
+
+    --header-height: 100px;
+    --gradient-brasil: linear-gradient(135deg, hsl(145 100% 30%) 0%, hsl(50 100% 50%) 50%, hsl(214 100% 23%) 100%);
+    --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 8px 30px -4px rgba(0, 0, 0, 0.15);
+  }
+
+  .dark {
+    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.6);
+    --shadow-card-hover: 0 8px 30px -4px rgba(0, 0, 0, 0.7);
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 353 84% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 100% 30%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 50 100% 50%;
+    --accent-foreground: 220 15% 15%;
+
+    --tertiary: 214 100% 40%;
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 353 84% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    min-width: 320px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  .container-fixed {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .container-fixed-left {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 1920px) {
+    .container-fixed {
+      padding: 0 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container-fixed {
+      padding: 0 1rem;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative font-medium transition-all duration-200;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-300;
+    background-color: white;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply opacity-100;
+  }
+
+  .article-card {
+    @apply relative overflow-hidden rounded-lg bg-card transition-all duration-300;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .article-card img {
+    object-position: center;
+  }
+
+  .grid > .block {
+    display: flex;
+  }
+
+  .grid > .block > .article-card {
+    flex: 1;
+  }
+
+  .category-badge {
+    @apply inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full;
+  }
+
+  .category-badge-politica {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .category-badge-internacional {
+    @apply bg-tertiary text-tertiary-foreground;
+  }
+
+  .category-badge-nacional {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .category-badge-economia {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  .category-badge-cultura {
+    background-color: #9333ea;
+    color: white;
+  }
+
+  .category-badge-educacao {
+    background-color: #0891b2;
+    color: white;
+  }
+
+  .category-badge-saude {
+    background-color: #16a34a;
+    color: white;
+  }
+
+  .category-badge-esporte {
+    background-color: #ea580c;
+    color: white;
+  }
+
+  .category-badge-tecnologia {
+    background-color: #6366f1;
+    color: white;
+  }
+
+  .category-badge-meio-ambiente {
+    background-color: #22c55e;
+    color: white;
+  }
+
+  .category-badge-default {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .brasil-gradient {
+    background: var(--gradient-brasil);
+  }
+
+  .text-main-red {
+    color: #e4142c;
+  }
+
+  .bg-main-red {
+    background-color: #e4142c;
+  }
+
+  .hover-main-red:hover {
+    color: #e4142c;
+  }
+}
+
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
