@@ -12,6 +12,8 @@ Auth system made with C# and .Net
 
 Aplicação web editorial com área pública e painel administrativo, construída para publicação de conteúdos, organização por categorias/autores e acompanhamento de métricas de visualização. O projeto demonstra desenvolvimento full stack orientado a produto, com foco em experiência do usuário e operação de conteúdo.
 
+<img width="1854" height="937" alt="Screenshot_1" src="https://github.com/user-attachments/assets/049cc3bd-bf05-436a-ac23-f2afcf42b063" />
+
 ## Visão Geral
 
 - Portal público com páginas de conteúdo, busca e navegação por categoria/autor.
