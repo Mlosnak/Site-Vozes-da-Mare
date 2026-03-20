@@ -113,19 +113,6 @@ npm run preview
 - `npm run build:dev`: gera build em modo desenvolvimento
 - `npm run lint`: análise estática de código
 - `npm run preview`: serve build localmente
-
-## Contribuição
-
-1. Crie uma branch: `feature/minha-mudanca`
-2. Execute validações: `npm run lint` e `npm run build`
-3. Abra Pull Request com motivação, escopo e evidências de teste
-
-## Estatísticas do Repositório
-
-Após publicar no GitHub, substitua `<owner>` e `<repo>`:
-
-```md
-![GitHub Repo stars](https://img.shields.io/github/stars/<owner>/<repo>?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/<owner>/<repo>?style=social)
 ![GitHub last commit](https://img.shields.io/github/last-commit/<owner>/<repo>)
 ```
